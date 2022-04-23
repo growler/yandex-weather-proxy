@@ -1,0 +1,15 @@
+[Unit]
+Description=Yandex.Weather Proxying server
+After=network-online.target
+
+[Service]
+Environment=LISTEN=0.0.0.0:8080
+Environment=CACHE=/var/lib/weather-proxy
+Environment=LAT=54.178539
+Environment=LON=37.574636
+EnvironmentFile=-/etc/default/yandex-weather-proxy
+WorkingDirectory=/run
+ExecStart=/usr/sbin/yandex-weather-proxy --listen "$LISTEN" --cache "$CACHE" --lat "$LAT" --lon "$LON" "$VERBOSE"
+
+[Install]
+WantedBy=multi-user.target

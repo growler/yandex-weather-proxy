@@ -1,0 +1,12 @@
+Source: yandex-weather-proxy
+Maintainer: Alexey Naidyonov <alexey.naidyonov@gmail.com>
+Section: misc
+Priority: optional
+Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 13)
+
+Package: yandex-weather-proxy
+Architecture: any
+Depends: ${shlibs:Depends}, librsvg2-bin (>= 2.50)
+Description: Proxies requests to Yandex Weather service and
+ performs conversion of icons from SVG to PNG format.

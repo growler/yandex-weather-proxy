@@ -1,0 +1,6 @@
+# LISTEN=0.0.0.0:8080
+# CACHE=/var/lib/weather-proxy
+# LAT=54.178539
+# LON=37.574636
+# API_KEY=yandex-weather-api-key
+# VERBOSE=-vvv
